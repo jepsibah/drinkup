@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  address: MyString
+  neighborhood: MyString
+  yelp: MyString
+
+two:
+  id: 1
+  address: MyString
+  neighborhood: MyString
+  yelp: MyString

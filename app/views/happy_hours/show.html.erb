@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @happy_hour.id %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @happy_hour.place_id %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @happy_hour.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @happy_hour.end_time %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @happy_hour.day %>
+</p>
+
+<p>
+  <strong>Deal:</strong>
+  <%= @happy_hour.deal %>
+</p>
+
+<%= link_to 'Edit', edit_happy_hour_path(@happy_hour) %> |
+<%= link_to 'Back', happy_hours_path %>

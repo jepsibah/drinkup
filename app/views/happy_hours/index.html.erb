@@ -1,0 +1,37 @@
+<h1>Listing happy_hours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Place</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Day</th>
+      <th>Deal</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @happy_hours.each do |happy_hour| %>
+      <tr>
+        <td><%= happy_hour.id %></td>
+        <td><%= happy_hour.place_id %></td>
+        <td><%= happy_hour.start_time %></td>
+        <td><%= happy_hour.end_time %></td>
+        <td><%= happy_hour.day %></td>
+        <td><%= happy_hour.deal %></td>
+        <td><%= link_to 'Show', happy_hour %></td>
+        <td><%= link_to 'Edit', edit_happy_hour_path(happy_hour) %></td>
+        <td><%= link_to 'Destroy', happy_hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Happy hour', new_happy_hour_path %>

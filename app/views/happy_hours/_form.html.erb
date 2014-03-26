@@ -1,0 +1,41 @@
+<%= form_for(@happy_hour) do |f| %>
+  <% if @happy_hour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@happy_hour.errors.count, "error") %> prohibited this happy_hour from being saved:</h2>
+
+      <ul>
+      <% @happy_hour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :place_id %><br>
+    <%= f.number_field :place_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.number_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.number_field :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :deal %><br>
+    <%= f.text_area :deal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
